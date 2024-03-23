@@ -22,13 +22,6 @@ def printmid(text,heightwise = False):
     padding = (termsize.columns - len(text))//2
     if padding < 0: padding = 0
     print(" "*padding+text)
-    """
-    if padding < 0:
-        printmid(text[:termsize.columns])
-        printmid(text[termsize.columns:])
-    else:
-        print(" "*padding+text)
-    """
 
 def hit():
     ind = randint(0,len(cards)-1)
@@ -118,7 +111,6 @@ while True:
     playernum = cardstotal(playercards)
     while playernum<=21:
         updatescreen()
-        #inp = input()[0].lower()
         if input() == "h":
             playercards.append(hit())
             playernum = cardstotal(playercards)
