@@ -111,7 +111,7 @@ while True:
     playernum = cardstotal(playercards)
     while playernum<=21:
         updatescreen()
-        if input() == "h":
+        if input('enter "h" to hit, enter nothing to stand: ').lower() == "h":
             playercards.append(hit())
             playernum = cardstotal(playercards)
         else:   
@@ -132,7 +132,7 @@ while True:
         updatescreen(0)
     elif playernum > dealernum or dealernum > 21:
         updatescreen(2)
-    input()
+    input("press enter to continue:")
 
 
 
